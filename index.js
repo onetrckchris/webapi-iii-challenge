@@ -17,5 +17,5 @@ server.use(logger);
 server.use('/users', userRouter);
 server.use('/posts', postRouter);
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 server.listen(port, console.log(`Server is running on ${port}.`))
